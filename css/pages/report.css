@@ -1,0 +1,462 @@
+.report-page {
+  padding: 20px;
+}
+
+/* Header */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.brand img {
+  width: 50px;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-info img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Title */
+.report-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.report-header h1 {
+  color: #2e7d32;
+}
+
+/* Term selector */
+.term-selector {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.term-selector button {
+  padding: 10px 15px;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+
+.term-selector .active {
+  background: #2e7d32;
+  color: white;
+}
+
+/* Card */
+.report-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Info */
+.student-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* Body */
+.report-body {
+  display: flex;
+  gap: 20px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.total {
+  background: #2e7d32;
+  color: white;
+}
+
+/* Side */
+.side-panel {
+  width: 250px;
+}
+
+.box {
+  background: #f3f4f6;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.box h4 {
+  color: #2e7d32;
+}
+
+/* Footer */
+.report-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.print-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .report-body {
+    flex-direction: column;
+  }
+
+  .side-panel {
+    width: 100%;
+  }
+
+  .student-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.report-body {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Wrap table */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  .topbar,
+  .term-selector,
+  .print-btn {
+    display: none;
+  }
+
+  .report-card {
+    box-shadow: none;
+    border: none;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/* Updated styling for changes */
+
+/* Layout */
+.report-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 180px;
+  background: #f3f4f6;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar button {
+  padding: 10px;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar button.active {
+  background: #2e7d32;
+  color: white;
+}
+
+/* Main Page */
+.report-page {
+  flex: 1;
+  padding: 20px;
+}
+
+/* Header */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.brand img {
+  width: 50px;
+}
+
+.brand h2 {
+  color: #2e7d32;
+}
+
+.brand p {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.user-info img {
+  width: 40px;
+  border-radius: 50%;
+}
+
+/* Header Text */
+.report-header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.report-header h1 {
+  color: #2e7d32;
+}
+
+/* Back Button */
+.back-btn {
+  margin: 10px 0;
+  padding: 10px 14px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Terms */
+.terms {
+  margin-bottom: 20px;
+}
+
+.term {
+  margin-bottom: 10px;
+}
+
+.term-toggle {
+  width: 100%;
+  text-align: left;
+  padding: 12px;
+  background: #e5e7eb;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.term-toggle.active {
+  background: #2e7d32;
+  color: white;
+}
+
+.term-content {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Card */
+.report-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Student Info */
+.student-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.student-info p {
+  margin-bottom: 5px;
+}
+
+/* Body */
+.report-body {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background: #f9fafb;
+}
+
+.total {
+  background: #2e7d32;
+  color: white;
+}
+
+.total-row td {
+  font-weight: bold;
+}
+
+/* Side Panel */
+.side-panel {
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box {
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.box h4 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.box ul {
+  padding-left: 18px;
+}
+
+.box li {
+  margin-bottom: 6px;
+}
+
+.box small {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Footer */
+.report-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.print-btn {
+  padding: 10px 15px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* PRINT */
+@media print {
+  .sidebar,
+  .topbar,
+  .back-btn,
+  .term-toggle,
+  .print-btn {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  .report-card {
+    border: none;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .report-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .report-body {
+    flex-direction: column;
+  }
+
+  .side-panel {
+    width: 100%;
+  }
+
+  .student-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

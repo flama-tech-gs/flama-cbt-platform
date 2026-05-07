@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam</title>
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/pages/exam.css" />
+  </head>
+
+  <body>
+    <div class="exam-layout">
+      <!-- LEFT PANEL -->
+      <aside class="left-panel">
+        <h3>Subject: Biology</h3>
+
+        <p>Total Questions</p>
+
+        <div class="question-grid" id="questionGrid"></div>
+      </aside>
+
+      <!-- CENTER -->
+      <main class="exam-main">
+        <h2>3rd Term Examination</h2>
+        <p class="sub">Answer all questions</p>
+
+        <div class="question-box">
+          <h3 id="questionNumber">Question 1:</h3>
+          <p id="questionText"></p>
+
+          <div id="options" class="options"></div>
+        </div>
+
+        <div class="nav-buttons">
+          <button id="prevBtn">← Back</button>
+          <button id="nextBtn">Next →</button>
+        </div>
+
+        <p class="warning-text">
+          Do not click submit until you are done. Submitted exams cannot be
+          reopened.
+        </p>
+      </main>
+
+      <!-- RIGHT PANEL -->
+      <aside class="right-panel">
+        <div class="timer" id="timer">45:00</div>
+
+        <p class="timer-warning">
+          Failure to submit before time expires will result in automatic
+          submission.
+        </p>
+
+        <div class="submit-box">
+          <p>⚠ Once you click submit, answers cannot be changed.</p>
+          <button id="submitBtn">Submit</button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="../js/pages/exam.js"></script>
+  </body>
+</html>

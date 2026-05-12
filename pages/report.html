@@ -3,167 +3,377 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Report</title>
+    <title>Student Report</title>
 
-    <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/pages/report.css" />
   </head>
-
   <body>
     <div class="report-layout">
-      <!-- LEFT SIDEBAR -->
+      <!-- SIDEBAR -->
       <aside class="sidebar">
-        <button>Jss 1</button>
-        <button>Jss 2</button>
-        <button class="active">Jss 3</button>
+        <div class="school-brand">
+          <img src="../assets/icons/logo.png" alt="School Logo" />
+
+          <div>
+            <h2>Mobayo Academic</h2>
+            <p>...Knowledge, Discipline, Excellence...</p>
+          </div>
+        </div>
+
+        <div class="class-buttons">
+          <button>Jss 1</button>
+          <button>Jss 2</button>
+          <button class="active">Jss 3</button>
+        </div>
       </aside>
 
       <!-- MAIN CONTENT -->
-      <main class="report-page">
-        <!-- HEADER -->
-        <header class="topbar">
-          <div class="brand">
-            <img src="../assets/icons/logo.png" />
-            <div>
-              <h2>Mobayo Academic</h2>
-              <p>...Knowledge, Discipline, Excellence...</p>
-            </div>
+      <main class="main-content">
+        <!-- TOP HEADER -->
+        <header class="top-header">
+          <div>
+            <h1>Student Academic Report</h1>
+            <p>
+              A comprehensive summary of your academic performance for the
+              current term and session.
+            </p>
           </div>
 
-          <div class="user-info">
-            <img src="../assets/icons/avatar.png" />
+          <div class="student-profile">
+            <img src="../assets/icons/avatar.png" alt="avatar" />
             <div>
-              <h4>Abiodun Adegbola</h4>
-              <p>Jss 3B</p>
+              <h3>Abiodun Adegbola</h3>
+              <span>Jss 3B</span>
             </div>
           </div>
         </header>
 
-        <!-- TITLE -->
-        <section class="report-header">
-          <h1>Student Academic Report</h1>
-          <p>A comprehensive summary of your academic performance</p>
-        </section>
-
         <!-- BACK BUTTON -->
-        <button class="back-btn">←</button>
+        <button class="back-btn">
+          <a href="../pages/onboarding.html">←</a>
+        </button>
 
-        <!-- TERM DROPDOWNS -->
-        <div class="terms">
-          <div class="term">
-            <button class="term-toggle">First Term ▼</button>
-            <div class="term-content hidden">No data</div>
+        <!-- TERM BUTTONS -->
+        <div class="term-buttons">
+          <button class="dropdown-btn">
+            First Term Report
+            <span>⌄</span>
+          </button>
+
+          <button class="dropdown-btn">
+            Second Term Report
+            <span>⌄</span>
+          </button>
+
+          <button class="dropdown-btn active-term">
+            Third Term Report
+            <span>⌃</span>
+          </button>
+        </div>
+
+        <!-- REPORT CARD -->
+        <section class="report-card">
+          <!-- TOP INFO -->
+          <div class="report-info">
+            <div class="left-info">
+              <p>Name: Abiodun Adegbola Odunyemi</p>
+              <p>Class: Jss3B</p>
+              <p>Department: Art</p>
+              <p>Access Number: JS/50/2024</p>
+            </div>
+
+            <div class="right-info">
+              <p>Team: 2nd</p>
+              <p>Year: 2026</p>
+              <p>No. of time school opened: 114</p>
+              <p>No. of student in class: 35</p>
+            </div>
           </div>
 
-          <div class="term">
-            <button class="term-toggle">Second Term ▼</button>
-            <div class="term-content hidden">No data</div>
-          </div>
+          <!-- REPORT GRID -->
+          <div class="report-grid">
+            <!-- SUBJECT AREA -->
+            <div class="subjects-column">
+              <div class="subjects-header">Subjects:</div>
 
-          <div class="term">
-            <button class="term-toggle active">Third Term ▲</button>
+              <div class="subject-row">• Computer Studies / ICT</div>
+              <div class="subject-row">• Further Mathematics</div>
+              <div class="subject-row">• Basic Science and Technology</div>
+              <div class="subject-row">• Physical and Health Education</div>
+              <div class="subject-row">• Entrepreneurship Education</div>
+              <div class="subject-row">• English Language</div>
+              <div class="subject-row">• Mathematics</div>
+              <div class="subject-row">• Biology</div>
+              <div class="subject-row">• Social Studies</div>
+              <div class="subject-row">• Home Economics</div>
+              <div class="subject-row">• Business Studies</div>
+              <div class="subject-row">• Religious Studies</div>
+              <div class="subject-row">• Basic Technology</div>
+              <div class="subject-row">• Security Education</div>
+              <div class="subject-row">• Civic Education</div>
+              <div class="subject-row">• Fine Art</div>
+              <div class="subject-row">• Yoruba</div>
+              <div class="subject-row">• Music</div>
+              <div class="subject-row">• Literature</div>
 
-            <div class="term-content">
-              <!-- REPORT CARD -->
-              <div class="report-card">
-                <!-- STUDENT INFO -->
-                <div class="student-info">
-                  <div>
-                    <p>Name: Abiodun Adegbola Odunyemi</p>
-                    <p>Class: Jss3B</p>
-                    <p>Department: Art</p>
-                    <p>Access Number: JS/50/2024</p>
-                  </div>
+              <div class="subject-row total-label">TOTAL</div>
+            </div>
 
-                  <div>
-                    <p>Team: 2nd</p>
-                    <p>Year: 2026</p>
-                    <p>No. of time school opened: 114</p>
-                    <p>No. of student in class: 35</p>
+            <!-- SCORES -->
+            <div class="scores-section">
+              <!-- HEADERS -->
+              <div class="score-top-header">
+                <div class="header-group">
+                  <h4>Test</h4>
+
+                  <div class="mini-headings">
+                    <span>OBJ</span>
+                    <span>Theory</span>
                   </div>
                 </div>
 
-                <!-- BODY -->
-                <div class="report-body">
-                  <!-- TABLE -->
-                  <div class="table-wrapper">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Subjects</th>
-                          <th colspan="2">Test</th>
-                          <th colspan="2">Exam</th>
-                          <th>Total</th>
-                        </tr>
-                        <tr>
-                          <th></th>
-                          <th>OBJ</th>
-                          <th>Theory</th>
-                          <th>OBJ</th>
-                          <th>Theory</th>
-                          <th></th>
-                        </tr>
-                      </thead>
+                <div class="header-group">
+                  <h4>Exam</h4>
 
-                      <tbody>
-                        <tr>
-                          <td>Computer Studies / ICT</td>
-                          <td>25</td>
-                          <td>15</td>
-                          <td>40</td>
-                          <td>20</td>
-                          <td class="total">100</td>
-                        </tr>
-
-                        <!-- Repeat rows -->
-
-                        <tr class="total-row">
-                          <td><strong>TOTAL</strong></td>
-                          <td>500</td>
-                          <td>300</td>
-                          <td>800</td>
-                          <td>400</td>
-                          <td class="total">2000</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div class="mini-headings">
+                    <span>OBJ</span>
+                    <span>Theory</span>
                   </div>
-
-                  <!-- RIGHT PANEL -->
-                  <aside class="side-panel">
-                    <div class="box">
-                      <h4>Affective Areas</h4>
-                      <ul>
-                        <li>Punctuality - 4</li>
-                        <li>Neatness - 5</li>
-                        <li>Politeness - 5</li>
-                      </ul>
-                      <small>Rate is from 1 - 5</small>
-                    </div>
-
-                    <div class="box">
-                      <h4>Psychomotor Skill</h4>
-                      <ul>
-                        <li>Handwriting - 4</li>
-                        <li>Verbal Skill - 5</li>
-                      </ul>
-                      <small>Rate is from 1 - 5</small>
-                    </div>
-                  </aside>
                 </div>
 
-                <!-- FOOTER -->
-                <div class="report-footer">
-                  <p>
-                    <strong>Principal comment:</strong> Excellent performance
-                    keep the ball rolling.
-                  </p>
-                  <button class="print-btn">Print Report</button>
+                <div class="header-total">Total</div>
+              </div>
+
+              <!-- SCORE ROWS -->
+              <div class="score-rows">
+                <!-- Repeat -->
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <div class="score-row">
+                  <span>25</span>
+                  <span class="cream">15</span>
+                  <span>40</span>
+                  <span class="cream">20</span>
+                  <span class="green-score">100</span>
+                </div>
+
+                <!-- TOTAL -->
+                <div class="score-row total-row">
+                  <span>500</span>
+                  <span class="cream">300</span>
+                  <span>800</span>
+                  <span class="cream">400</span>
+                  <span class="green-score">2000</span>
                 </div>
               </div>
             </div>
+
+            <!-- SIDE PANEL -->
+            <div class="side-panel">
+              <div class="rating-card">
+                <h3>Affective Areas</h3>
+
+                <ul>
+                  <li>Punctuality <span>4</span></li>
+                  <li>Neatness <span>5</span></li>
+                  <li>Politeness <span>5</span></li>
+                  <li>Honesty <span>5</span></li>
+                  <li>Co-operation <span>5</span></li>
+                </ul>
+
+                <div class="rate-note">Rate is from 1 - 5</div>
+              </div>
+
+              <div class="rating-card">
+                <h3>PSTCHOMOTOR SKILL</h3>
+
+                <ul>
+                  <li>Handwriting <span>4</span></li>
+                  <li>Verbal Skill <span>5</span></li>
+                  <li>Games <span>5</span></li>
+                  <li>Sport <span>5</span></li>
+                  <li>Handling Tools <span>5</span></li>
+                </ul>
+
+                <div class="rate-note">Rate is from 1 - 5</div>
+              </div>
+
+              <!-- SCALE -->
+              <div class="scale-box">
+                <h4>Scale</h4>
+
+                <p>Excellent <span>5</span></p>
+                <p>Good <span>4</span></p>
+                <p>Fair <span>3</span></p>
+                <p>Poor <span>2</span></p>
+                <p>Very Poor <span>1</span></p>
+              </div>
+            </div>
           </div>
-        </div>
+
+          <!-- FOOTER -->
+          <div class="report-footer">
+            <div>
+              <strong>Principal comment:</strong>
+              Excellent performance keep the ball rolling.
+            </div>
+
+            <div class="signature">
+              <strong>Principal Signature:</strong>
+              <span>Adegbola Mobayomi</span>
+            </div>
+          </div>
+
+          <button class="print-btn">Print Report</button>
+        </section>
+        <!-- <section class="report-card">
+          
+          <div class="report-top">
+            <div>
+              <p><strong>Name:</strong> Abiodun Adegbola Odunyemi</p>
+              <p><strong>Class:</strong> Jss3B</p>
+              <p><strong>Department:</strong> Art</p>
+              <p><strong>Access Number:</strong> JS/50/2024</p>
+            </div>
+
+            <div>
+              <p><strong>Team:</strong> 2nd</p>
+              <p><strong>Year:</strong> 2026</p>
+              <p><strong>No. of time school opened:</strong> 114</p>
+              <p><strong>No. of students in class:</strong> 35</p>
+            </div>
+          </div>
+
+         
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Subjects</th>
+                  <th>OBJ</th>
+                  <th>Theory</th>
+                  <th>OBJ</th>
+                  <th>Theory</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>Computer Studies / ICT</td>
+                  <td>25</td>
+                  <td>15</td>
+                  <td>40</td>
+                  <td>20</td>
+                  <td class="green">100</td>
+                </tr>
+
+                <tr>
+                  <td>Mathematics</td>
+                  <td>25</td>
+                  <td>15</td>
+                  <td>40</td>
+                  <td>20</td>
+                  <td class="green">100</td>
+                </tr>
+
+                <tr>
+                  <td>English Language</td>
+                  <td>25</td>
+                  <td>15</td>
+                  <td>40</td>
+                  <td>20</td>
+                  <td class="green">100</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          
+          <div class="report-footer">
+            <div>
+              <strong>Principal comment:</strong>
+              Excellent performance keep the ball rolling.
+            </div>
+
+            <div class="signature">
+              <strong>Principal Signature:</strong>
+              <span>Adebola Mobayomi</span>
+            </div>
+          </div>
+
+          <button class="print-btn">Print Report</button>
+        </section> -->
       </main>
     </div>
 

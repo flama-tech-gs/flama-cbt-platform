@@ -10,6 +10,52 @@ const questions = [
     options: ["Protein", "DNA", "Fat", "Water"],
     answer: "DNA",
   },
+
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["Protein", "DNA", "Fat", "Water"],
+    answer: "DNA",
+  },
 ];
 
 let currentQuestion = 0;
@@ -125,5 +171,51 @@ function submitExam() {
   window.location.href = "report.html";
 }
 
+// function confirmSubmit() {
+//   localStorage.removeItem("answers");
+
+//   document.getElementById("submitModal").classList.add("hidden");
+//   document.getElementById("successModal").classList.remove("hidden");
+// }
+
+// function goToDashboard() {
+
+//   window.location.href = "index.html";
+// }
+
+// function confirmSubmit() {
+//   document.getElementById("submitModal").classList.add("hidden");
+
+//   setTimeout(() => {
+//     localStorage.removeItem("answers");
+//     document.getElementById("successModal").classList.remove("hidden");
+//   }, 800);
+// }
+
 // INIT
 loadQuestion();
+
+// For submitmodal
+// function openModal() {
+//   const answered = Object.keys(answers).length;
+//   const total = questions.length;
+//   const unanswered = total - answered;
+
+//   document.getElementById("answeredCount").textContent =
+//     `${answered} out of ${total}`;
+
+//   document.getElementById("unansweredCount").textContent =
+//     `${unanswered} Questions`;
+
+//   document.getElementById("submitModal").classList.remove("hidden");
+// }
+
+// function closeModal() {
+//   document.getElementById("submitModal").classList.add("hidden");
+// }
+
+// function confirmSubmit() {
+//   alert("Exam Submitted Successfully!");
+//   localStorage.removeItem("answers");
+//   window.location.reload();
+// }

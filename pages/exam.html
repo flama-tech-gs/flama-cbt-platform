@@ -10,6 +10,30 @@
   </head>
 
   <body>
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="brand">
+        <img src="../assets/icons/logo.png" alt="logo" />
+        <div>
+          <h2>Mobayo Academic</h2>
+          <p>...Knowledge, Discipline, Excellence...</p>
+        </div>
+      </div>
+
+      <div class="exam-title">
+        <h2>3rd Term Examination</h2>
+        <p class="sub">Answer all questions</p>
+      </div>
+
+      <div class="user-info">
+        <img src="../assets/icons/avatar.png" alt="user" />
+        <div>
+          <h4>Abiodun Adegbola</h4>
+          <p>Jss 3B</p>
+        </div>
+      </div>
+    </header>
+
     <div class="exam-layout">
       <!-- LEFT PANEL -->
       <aside class="left-panel">
@@ -22,8 +46,8 @@
 
       <!-- CENTER -->
       <main class="exam-main">
-        <h2>3rd Term Examination</h2>
-        <p class="sub">Answer all questions</p>
+        <!-- <h2>3rd Term Examination</h2>
+        <p class="sub">Answer all questions</p> -->
 
         <div class="question-box">
           <h3 id="questionNumber">Question 1:</h3>
@@ -37,9 +61,11 @@
           <button id="nextBtn">Next →</button>
         </div>
 
-        <p class="warning-text">
-          Do not click submit until you are done. Submitted exams cannot be
-          reopened.
+        <p class="warning-text change-color">
+          ⚠️ Warning: <br />
+          Do not click the Submit button if you have not completed all
+          questions. Only submit when you are fully done answering. Submitted
+          exams cannot be reopened.
         </p>
       </main>
 
@@ -48,15 +74,55 @@
         <div class="timer" id="timer">45:00</div>
 
         <p class="timer-warning">
-          Failure to submit before time expires will result in automatic
-          submission.
+          ⚠️ Failure to submit before time expires will result in automatic
+          submission of your current answers.
         </p>
 
         <div class="submit-box">
-          <p>⚠ Once you click submit, answers cannot be changed.</p>
-          <button id="submitBtn">Submit</button>
+          <h3>⚠️ Warning:</h3>
+          <p>
+            Once you click SUBMIT, your answers cannot be changed. Make sure you
+            have answered all questions before submitting
+          </p>
+          <button id="submitBtn" onclick="openModal()">Submit</button>
         </div>
       </aside>
+    </div>
+
+    <!-- SUBMIT MODAL -->
+    <div id="submitModal" class="modal hidden">
+      <div class="modal-content">
+        <h2>🚨 Are You Sure?</h2>
+        <p>You are about to end and submit your exam.</p>
+
+        <p><strong>📚 Subject:</strong> Biology</p>
+        <p><strong>Answered:</strong> <span id="answeredCount"></span></p>
+        <p>
+          <strong>⚠️ Unanswered:</strong> <span id="unansweredCount"></span>
+        </p>
+
+        <p class="warning-text">
+          🚨 Warning: Unanswered questions will be marked as wrong.
+        </p>
+
+        <div class="modal-actions">
+          <button class="back-btn" onclick="closeModal()">
+            Back to Questions
+          </button>
+          <button class="submit-btn" onclick="confirmSubmit()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div id="successModal" class="modal hidden">
+      <div class="modal-content success-box">
+        <h2>✅ Examination Submitted Successfully!</h2>
+        <p>Your examination has been submitted.</p>
+        <p>Thank you for completing your exam.</p>
+
+        <button onclick="goToDashboard()">Continue</button>
+      </div>
     </div>
 
     <script src="../js/pages/exam.js"></script>

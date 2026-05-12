@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CBT Exam</title>
+    <link rel="stylesheet" href="../css/pages/exam2.css" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <div class="header">
+      <div class="logo">
+        <img src="../assets/icons/logo.png" alt="logo" />
+        <div>
+          <strong>Mobayo Academic</strong><br />
+          <small>Knowledge, Discipline, Excellence</small>
+        </div>
+      </div>
+
+      <div class="user">
+        <img src="../assets/icons/avatar.png" alt="avatar" />
+        <div>
+          <strong>Abiodun Adegbola</strong><br />
+          <small>JSS 3B</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+      <!-- SIDEBAR -->
+      <div class="sidebar">
+        <h4>Questions</h4>
+        <div id="questionGrid" class="grid"></div>
+      </div>
+
+      <!-- MAIN -->
+      <div class="main">
+        <div class="question-box">
+          <h3 id="qTitle"></h3>
+          <p id="qText"></p>
+
+          <div id="options" class="options"></div>
+
+          <div class="nav">
+            <button onclick="prevQuestion()">Back</button>
+            <button onclick="nextQuestion()">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="timer" id="timer">10:00</div>
+
+        <div class="warning">
+          <strong>Warning:</strong>
+          <p>Submit only when done.</p>
+          <button onclick="submitExam()">Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/pages/exam2.js"></script>
+  </body>
+</html>

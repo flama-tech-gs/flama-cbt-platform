@@ -223,6 +223,7 @@
 
   padding: 2rem;
   border-radius: 18px;
+  border: 1px solid #256528;
 
   text-align: center;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
@@ -231,13 +232,13 @@
 }
 
 .forgot-modal h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #ba3f3f;
   margin-bottom: 1.5rem;
 }
 
 .forgot-modal p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.7;
   color: #2e7d32;
   margin-bottom: 2rem;
@@ -251,7 +252,7 @@
   padding: 1rem 2rem;
   border-radius: 10px;
 
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   cursor: pointer;
 
   transition: 0.3s ease;

@@ -24,7 +24,16 @@
           <!-- Access Code -->
           <div class="form-group">
             <label>Access Code</label>
-            <input type="text" placeholder="e.g JS/50/2024" required />
+            <input
+              type="text"
+              id="accessCode"
+              placeholder="e.g JS/50/2024"
+              required
+            />
+
+            <small class="error-message" id="accessError">
+              Invalid access code
+            </small>
           </div>
 
           <!-- Password -->
@@ -42,11 +51,29 @@
             </div>
 
             <small class="hint">password must be in title case</small>
+
+            <small class="error-message" id="passwordError">
+              Incorrect password
+            </small>
           </div>
 
           <!-- Forgot -->
           <div class="forgot">
-            <a href="#">Forget password?</a>
+            <a href="#" id="forgotPasswordLink">Forget password?</a>
+          </div>
+
+          <!-- FORGOT PASSWORD MODAL -->
+          <div class="modal-overlay" id="forgotModal">
+            <div class="forgot-modal">
+              <h3>⚠ Password Change Restricted</h3>
+
+              <p>
+                Please contact the school authority to recover or reset your
+                password.
+              </p>
+
+              <button id="closeModal">Okay</button>
+            </div>
           </div>
 
           <!-- Button -->

@@ -168,3 +168,107 @@
     font-size: 20px;
   }
 }
+
+/* FOR ERROR STATE  */
+
+/* Invalid Input State */
+.input-error {
+  border: 2px solid #e53935 !important;
+  background: #ffeaea !important;
+  color: #e53935;
+}
+
+.input-error::placeholder {
+  color: #e57373;
+}
+
+/* Error message */
+.error-message {
+  color: #e53935;
+  font-size: 1.3rem;
+  margin-top: 6px;
+  display: none;
+}
+
+/* section for the popup message */
+
+/* MODAL OVERLAY */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+/* SHOW MODAL */
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* MODAL BOX */
+.forgot-modal {
+  background: #fff;
+  width: 90%;
+  max-width: 420px;
+
+  padding: 2rem;
+  border-radius: 18px;
+
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+  animation: popup 0.3s ease;
+}
+
+.forgot-modal h3 {
+  font-size: 2rem;
+  color: #ba3f3f;
+  margin-bottom: 1.5rem;
+}
+
+.forgot-modal p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+}
+
+.forgot-modal button {
+  border: none;
+  background: #2e7d32;
+  color: #fff;
+
+  padding: 1rem 2rem;
+  border-radius: 10px;
+
+  font-size: 1.5rem;
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.forgot-modal button:hover {
+  background: #256528;
+}
+
+@keyframes popup {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

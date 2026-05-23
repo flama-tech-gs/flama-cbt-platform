@@ -318,8 +318,9 @@ td {
 }
 
 .score-top-header {
+  max-width: 900px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   gap: 30px;
   margin-bottom: 8px;
@@ -450,4 +451,8 @@ td {
 .back-btn a {
   color: #fff;
   text-decoration: none;
+}
+
+.back-btn:hover {
+  background: #1b5e20;
 }

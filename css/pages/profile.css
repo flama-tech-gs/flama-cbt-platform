@@ -292,3 +292,7 @@
     grid-template-columns: 1fr;
   }
 }
+
+.back-btn:hover {
+  background: #1b5e20;
+}

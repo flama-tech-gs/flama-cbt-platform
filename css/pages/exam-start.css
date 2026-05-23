@@ -30,7 +30,7 @@ body {
 .back-btn {
   position: absolute;
   top: 80px;
-  left: 20px;
+  left: 400px;
   padding: 10px 14px;
   background: #2e7d32;
   color: white;
@@ -142,4 +142,8 @@ body {
   100% {
     color: #f97316;
   }
+}
+
+.back-btn:hover {
+  background: #1b5e20;
 }

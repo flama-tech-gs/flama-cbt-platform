@@ -291,9 +291,10 @@ body {
   background: #fff;
   padding: 30px;
   border-radius: 20px;
-  width: 400px;
+  width: 600px;
   text-align: center;
   border: 2px solid #2e7d32;
+  color: #2e7d32;
 }
 
 .modal-content h2 {
@@ -310,15 +311,29 @@ body {
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
+  align-items: center;
 }
 
 .back-btn {
   background: #eee;
   color: #333;
+  width: 45%;
+  height: 45px;
+}
+
+.back-btn:hover {
+  background: #ddd;
 }
 
 .submit-btn {
   background: #2e7d32;
+  width: 45%;
+  height: 45px;
+  border-radius: 12px;
+}
+
+.submit-btn:hover {
+  background: #27632a;
 }
 
 /* final submission */
@@ -335,5 +350,11 @@ body {
 .success-box button {
   margin-top: 20px;
   background: #2e7d32;
-  width: 100%;
+  width: 30%;
+  height: 45px;
+  border-radius: 12px;
+}
+
+.success-box button:hover {
+  background: #27632a;
 }

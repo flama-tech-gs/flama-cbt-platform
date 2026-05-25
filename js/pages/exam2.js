@@ -5,52 +5,281 @@
 const questions = [
   {
     question: "Which of the following is the basic unit of life?",
-    options: ["Tissue", "Organ", "Cell", "Organism"],
+    options: ["(a) Tissue", "(b) Organ", "(c) Cell", "(d) Organism"],
     answer: "Cell",
   },
   {
     question: "What carries genetic information?",
-    options: ["Protein", "DNA", "Fat", "Water"],
+    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water"],
     answer: "DNA",
   },
   {
     question: "Which organ pumps blood around the body?",
-    options: ["Heart", "Kidney", "Liver", "Lungs"],
+    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs"],
     answer: "Heart",
   },
   {
     question: "What is the boiling point of water?",
-    options: ["50°C", "100°C", "120°C", "90°C"],
+    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C"],
     answer: "100°C",
   },
   {
     question: "Which planet is known as the Red Planet?",
-    options: ["Earth", "Venus", "Mars", "Jupiter"],
+    options: ["(a) Earth", "(b) Venus", "(c) Mars", "(d) Jupiter"],
     answer: "Mars",
   },
   {
     question: "Which gas do plants absorb?",
-    options: ["Oxygen", "Hydrogen", "Carbon Dioxide", "Nitrogen"],
+    options: [
+      "(a) Oxygen",
+      "(b) Hydrogen",
+      "(c) Carbon Dioxide",
+      "(d) Nitrogen",
+    ],
     answer: "Carbon Dioxide",
   },
   {
     question: "What is H2O commonly called?",
-    options: ["Salt", "Water", "Hydrogen", "Oxygen"],
+    options: ["(a) Salt", "(b) Water", "(c) Hydrogen", "(d) Oxygen"],
     answer: "Water",
   },
   {
     question: "How many bones are in the adult body?",
-    options: ["206", "300", "150", "250"],
+    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250"],
     answer: "206",
   },
   {
     question: "Which blood group is universal donor?",
-    options: ["A", "B", "O", "AB"],
+    options: ["(a) A", "(b) B", "(c) O", "(d) AB"],
     answer: "O",
   },
   {
     question: "Which organ helps humans breathe?",
-    options: ["Heart", "Liver", "Lungs", "Kidney"],
+    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney"],
+    answer: "Lungs",
+  },
+
+  {
+    question: "Which of the following is the basic unit of life?",
+    options: ["(a) Tissue", "(b) Organ", "(c) Cell", "(d) Organism"],
+    answer: "Cell",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water"],
+    answer: "DNA",
+  },
+  {
+    question: "Which organ pumps blood around the body?",
+    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs"],
+    answer: "Heart",
+  },
+  {
+    question: "What is the boiling point of water?",
+    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C"],
+    answer: "100°C",
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    options: ["(a) Earth", "(b) Venus", "(c) Mars", "(d) Jupiter"],
+    answer: "Mars",
+  },
+  {
+    question: "Which gas do plants absorb?",
+    options: [
+      "(a) Oxygen",
+      "(b) Hydrogen",
+      "(c) Carbon Dioxide",
+      "(d) Nitrogen",
+    ],
+    answer: "Carbon Dioxide",
+  },
+  {
+    question: "What is H2O commonly called?",
+    options: ["(a) Salt", "(b) Water", "(c) Hydrogen", "(d) Oxygen"],
+    answer: "Water",
+  },
+  {
+    question: "How many bones are in the adult body?",
+    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250"],
+    answer: "206",
+  },
+  {
+    question: "Which blood group is universal donor?",
+    options: ["(a) A", "(b) B", "(c) O", "(d) AB"],
+    answer: "O",
+  },
+  {
+    question: "Which organ helps humans breathe?",
+    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney"],
+    answer: "Lungs",
+  },
+
+  {
+    question: "Which of the following is the basic unit of life?",
+    options: ["(a) Tissue", "(b) Organ", "(c) Cell", "(d) Organism"],
+    answer: "Cell",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water"],
+    answer: "DNA",
+  },
+  {
+    question: "Which organ pumps blood around the body?",
+    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs"],
+    answer: "Heart",
+  },
+  {
+    question: "What is the boiling point of water?",
+    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C"],
+    answer: "100°C",
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    options: ["(a) Earth", "(b) Venus", "(c) Mars", "(d) Jupiter"],
+    answer: "Mars",
+  },
+  {
+    question: "Which gas do plants absorb?",
+    options: [
+      "(a) Oxygen",
+      "(b) Hydrogen",
+      "(c) Carbon Dioxide",
+      "(d) Nitrogen",
+    ],
+    answer: "Carbon Dioxide",
+  },
+  {
+    question: "What is H2O commonly called?",
+    options: ["(a) Salt", "(b) Water", "(c) Hydrogen", "(d) Oxygen"],
+    answer: "Water",
+  },
+  {
+    question: "How many bones are in the adult body?",
+    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250"],
+    answer: "206",
+  },
+  {
+    question: "Which blood group is universal donor?",
+    options: ["(a) A", "(b) B", "(c) O", "(d) AB"],
+    answer: "O",
+  },
+  {
+    question: "Which organ helps humans breathe?",
+    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney"],
+    answer: "Lungs",
+  },
+
+  {
+    question: "Which of the following is the basic unit of life?",
+    options: ["(a) Tissue", "(b) Organ", "(c) Cell", "(d) Organism"],
+    answer: "Cell",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water"],
+    answer: "DNA",
+  },
+  {
+    question: "Which organ pumps blood around the body?",
+    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs"],
+    answer: "Heart",
+  },
+  {
+    question: "What is the boiling point of water?",
+    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C"],
+    answer: "100°C",
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    options: ["(a) Earth", "(b) Venus", "(c) Mars", "(d) Jupiter"],
+    answer: "Mars",
+  },
+  {
+    question: "Which gas do plants absorb?",
+    options: [
+      "(a) Oxygen",
+      "(b) Hydrogen",
+      "(c) Carbon Dioxide",
+      "(d) Nitrogen",
+    ],
+    answer: "Carbon Dioxide",
+  },
+  {
+    question: "What is H2O commonly called?",
+    options: ["(a) Salt", "(b) Water", "(c) Hydrogen", "(d) Oxygen"],
+    answer: "Water",
+  },
+  {
+    question: "How many bones are in the adult body?",
+    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250"],
+    answer: "206",
+  },
+  {
+    question: "Which blood group is universal donor?",
+    options: ["(a) A", "(b) B", "(c) O", "(d) AB"],
+    answer: "O",
+  },
+  {
+    question: "Which organ helps humans breathe?",
+    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney"],
+    answer: "Lungs",
+  },
+
+  {
+    question: "Which of the following is the basic unit of life?",
+    options: ["(a) Tissue", "(b) Organ", "(c) Cell", "(d) Organism"],
+    answer: "Cell",
+  },
+  {
+    question: "What carries genetic information?",
+    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water"],
+    answer: "DNA",
+  },
+  {
+    question: "Which organ pumps blood around the body?",
+    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs"],
+    answer: "Heart",
+  },
+  {
+    question: "What is the boiling point of water?",
+    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C"],
+    answer: "100°C",
+  },
+  {
+    question: "Which planet is known as the Red Planet?",
+    options: ["(a) Earth", "(b) Venus", "(c) Mars", "(d) Jupiter"],
+    answer: "Mars",
+  },
+  {
+    question: "Which gas do plants absorb?",
+    options: [
+      "(a) Oxygen",
+      "(b) Hydrogen",
+      "(c) Carbon Dioxide",
+      "(d) Nitrogen",
+    ],
+    answer: "Carbon Dioxide",
+  },
+  {
+    question: "What is H2O commonly called?",
+    options: ["(a) Salt", "(b) Water", "(c) Hydrogen", "(d) Oxygen"],
+    answer: "Water",
+  },
+  {
+    question: "How many bones are in the adult body?",
+    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250"],
+    answer: "206",
+  },
+  {
+    question: "Which blood group is universal donor?",
+    options: ["(a) A", "(b) B", "(c) O", "(d) AB"],
+    answer: "O",
+  },
+  {
+    question: "Which organ helps humans breathe?",
+    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney"],
     answer: "Lungs",
   },
 ];

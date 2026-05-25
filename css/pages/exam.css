@@ -57,6 +57,19 @@ body {
   margin: 40px 0;
 }
 
+.question-box h3#questionNumber {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.question-box p#questionText {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 10px;
+  color: #222;
+}
+
 .options {
   margin-top: 20px;
   display: flex;
@@ -67,6 +80,7 @@ body {
 .options button {
   padding: 10px;
   border: 1px solid #ccc;
+  font-weight: 400;
   cursor: pointer;
   background: white;
 }
@@ -357,4 +371,8 @@ body {
 
 .success-box button:hover {
   background: #27632a;
+}
+
+.left-panel span {
+  color: #4d4d4d;
 }

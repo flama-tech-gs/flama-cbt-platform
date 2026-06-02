@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #f5f5f5;
+  background: #ffffff;
   font-family: Arial, sans-serif;
 }
 
@@ -54,7 +54,13 @@ body {
 }
 
 .question-box {
-  margin: 40px 0;
+  margin: 48px 0;
+  text-align: left;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  /* box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  border: 1px solid #efefef; */
 }
 
 .question-box h3#questionNumber {
@@ -83,6 +89,8 @@ body {
   font-weight: 400;
   cursor: pointer;
   background: white;
+  text-align: left;
+  border-radius: 8px;
 }
 
 .options button.selected {
@@ -123,6 +131,7 @@ body {
   background: #e8f5e9;
   padding: 15px;
   border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
 }
 
 .submit-box button {
@@ -375,4 +384,15 @@ body {
 
 .left-panel span {
   color: #4d4d4d;
+}
+
+#submitBtn:hover,
+#prevBtn:hover,
+#nextBtn:hover {
+  background: #59d25f;
+}
+
+.brand,
+.user-info {
+  margin-left: 15px;
 }

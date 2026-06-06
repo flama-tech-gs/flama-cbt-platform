@@ -1,564 +1,610 @@
-// ============================
-// SAMPLE QUESTIONS
-// ============================
+//exam2.js
 
-const questions = [
-  {
-    question: "Which of the following is the basic unit of life?",
-    options: [
-      "(a) Tissue",
-      "(b) Organ",
-      "(c) Cell",
-      "(d) Organism",
-      "(e) Molecule",
-    ],
-    answer: "Cell",
-  },
-  {
-    question: "What carries genetic information?",
-    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water", "(e) RNA"],
-    answer: "DNA",
-  },
-  {
-    question: "Which organ pumps blood around the body?",
-    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs", "(e) Brain"],
-    answer: "Heart",
-  },
-  {
-    question: "What is the boiling point of water?",
-    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C", "(e) 80°C"],
-    answer: "100°C",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: [
-      "(a) Earth",
-      "(b) Venus",
-      "(c) Mars",
-      "(d) Jupiter",
-      "(e) Saturn",
-    ],
-    answer: "Mars",
-  },
-  {
-    question: "Which gas do plants absorb?",
-    options: [
-      "(a) Oxygen",
-      "(b) Hydrogen",
-      "(c) Carbon Dioxide",
-      "(d) Nitrogen",
-      "(e) Helium",
-    ],
-    answer: "Carbon Dioxide",
-  },
-  {
-    question: "What is H2O commonly called?",
-    options: [
-      "(a) Salt",
-      "(b) Water",
-      "(c) Hydrogen",
-      "(d) Oxygen",
-      "(e) Carbon Dioxide",
-    ],
-    answer: "Water",
-  },
-  {
-    question: "How many bones are in the adult body?",
-    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250", "(e) 180"],
-    answer: "206",
-  },
-  {
-    question: "Which blood group is universal donor?",
-    options: ["(a) A", "(b) B", "(c) O", "(d) AB", "(e) A+"],
-    answer: "O",
-  },
-  {
-    question: "Which organ helps humans breathe?",
-    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney", "(e) Brain"],
-    answer: "Lungs",
-  },
+//const API = "http://localhost:5000/api";
+const API = "https://flama-cbt-backend.onrender.com/api"; // Production backend
 
-  {
-    question: "Which of the following is the basic unit of life?",
-    options: [
-      "(a) Tissue",
-      "(b) Organ",
-      "(c) Cell",
-      "(d) Organism",
-      "(e) Molecule",
-    ],
-    answer: "Cell",
-  },
-  {
-    question: "What carries genetic information?",
-    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water", "(e) RNA"],
-    answer: "DNA",
-  },
-  {
-    question: "Which organ pumps blood around the body?",
-    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs", "(e) Brain"],
-    answer: "Heart",
-  },
-  {
-    question: "What is the boiling point of water?",
-    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C", "(e) 80°C"],
-    answer: "100°C",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: [
-      "(a) Earth",
-      "(b) Venus",
-      "(c) Mars",
-      "(d) Jupiter",
-      "(e) Saturn",
-    ],
-    answer: "Mars",
-  },
-  {
-    question: "Which gas do plants absorb?",
-    options: [
-      "(a) Oxygen",
-      "(b) Hydrogen",
-      "(c) Carbon Dioxide",
-      "(d) Nitrogen",
-      "(e) Helium",
-    ],
-    answer: "Carbon Dioxide",
-  },
-  {
-    question: "What is H2O commonly called?",
-    options: [
-      "(a) Salt",
-      "(b) Water",
-      "(c) Hydrogen",
-      "(d) Oxygen",
-      "(e) Carbon Dioxide",
-    ],
-    answer: "Water",
-  },
-  {
-    question: "How many bones are in the adult body?",
-    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250", "(e) 180"],
-    answer: "206",
-  },
-  {
-    question: "Which blood group is universal donor?",
-    options: ["(a) A", "(b) B", "(c) O", "(d) AB", "(e) A+"],
-    answer: "O",
-  },
-  {
-    question: "Which organ helps humans breathe?",
-    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney", "(e) Brain"],
-    answer: "Lungs",
-  },
+const token = localStorage.getItem("token");
+const userId = localStorage.getItem("userId");
+const role = localStorage.getItem("role");
 
-  {
-    question: "Which of the following is the basic unit of life?",
-    options: [
-      "(a) Tissue",
-      "(b) Organ",
-      "(c) Cell",
-      "(d) Organism",
-      "(e) Molecule",
-    ],
-    answer: "Cell",
-  },
-  {
-    question: "What carries genetic information?",
-    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water", "(e) RNA"],
-    answer: "DNA",
-  },
-  {
-    question: "Which organ pumps blood around the body?",
-    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs", "(e) Brain"],
-    answer: "Heart",
-  },
-  {
-    question: "What is the boiling point of water?",
-    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C", "(e) 80°C"],
-    answer: "100°C",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: [
-      "(a) Earth",
-      "(b) Venus",
-      "(c) Mars",
-      "(d) Jupiter",
-      "(e) Saturn",
-    ],
-    answer: "Mars",
-  },
-  {
-    question: "Which gas do plants absorb?",
-    options: [
-      "(a) Oxygen",
-      "(b) Hydrogen",
-      "(c) Carbon Dioxide",
-      "(d) Nitrogen",
-      "(e) Helium",
-    ],
-    answer: "Carbon Dioxide",
-  },
-  {
-    question: "What is H2O commonly called?",
-    options: [
-      "(a) Salt",
-      "(b) Water",
-      "(c) Hydrogen",
-      "(d) Oxygen",
-      "(e) Carbon Dioxide",
-    ],
-    answer: "Water",
-  },
-  {
-    question: "How many bones are in the adult body?",
-    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250", "(e) 180"],
-    answer: "206",
-  },
-  {
-    question: "Which blood group is universal donor?",
-    options: ["(a) A", "(b) B", "(c) O", "(d) AB", "(e) A+"],
-    answer: "O",
-  },
-  {
-    question: "Which organ helps humans breathe?",
-    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney", "(e) Brain"],
-    answer: "Lungs",
-  },
+if (token) {
+  try {
+    const payload = JSON.parse(atob(token.split(".")[1]));
 
-  {
-    question: "Which of the following is the basic unit of life?",
-    options: [
-      "(a) Tissue",
-      "(b) Organ",
-      "(c) Cell",
-      "(d) Organism",
-      "(e) Molecule",
-    ],
-    answer: "Cell",
-  },
-  {
-    question: "What carries genetic information?",
-    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water", "(e) RNA"],
-    answer: "DNA",
-  },
-  {
-    question: "Which organ pumps blood around the body?",
-    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs", "(e) Brain"],
-    answer: "Heart",
-  },
-  {
-    question: "What is the boiling point of water?",
-    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C", "(e) 80°C"],
-    answer: "100°C",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: [
-      "(a) Earth",
-      "(b) Venus",
-      "(c) Mars",
-      "(d) Jupiter",
-      "(e) Saturn",
-    ],
-    answer: "Mars",
-  },
-  {
-    question: "Which gas do plants absorb?",
-    options: [
-      "(a) Oxygen",
-      "(b) Hydrogen",
-      "(c) Carbon Dioxide",
-      "(d) Nitrogen",
-      "(e) Helium",
-    ],
-    answer: "Carbon Dioxide",
-  },
-  {
-    question: "What is H2O commonly called?",
-    options: [
-      "(a) Salt",
-      "(b) Water",
-      "(c) Hydrogen",
-      "(d) Oxygen",
-      "(e) Carbon Dioxide",
-    ],
-    answer: "Water",
-  },
-  {
-    question: "How many bones are in the adult body?",
-    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250", "(e) 180"],
-    answer: "206",
-  },
-  {
-    question: "Which blood group is universal donor?",
-    options: ["(a) A", "(b) B", "(c) O", "(d) AB", "(e) A+"],
-    answer: "O",
-  },
-  {
-    question: "Which organ helps humans breathe?",
-    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney", "(e) Brain"],
-    answer: "Lungs",
-  },
+    if (payload.exp * 1000 < Date.now()) {
+      localStorage.clear();
+    }
+  } catch (err) {
+    localStorage.clear();
+    window.location.href = "../index.html";
+  }
+}
 
-  {
-    question: "Which of the following is the basic unit of life?",
-    options: [
-      "(a) Tissue",
-      "(b) Organ",
-      "(c) Cell",
-      "(d) Organism",
-      "(e) Molecule",
-    ],
-    answer: "Cell",
-  },
-  {
-    question: "What carries genetic information?",
-    options: ["(a) Protein", "(b) DNA", "(c) Fat", "(d) Water", "(e) RNA"],
-    answer: "DNA",
-  },
-  {
-    question: "Which organ pumps blood around the body?",
-    options: ["(a) Heart", "(b) Kidney", "(c) Liver", "(d) Lungs", "(e) Brain"],
-    answer: "Heart",
-  },
-  {
-    question: "What is the boiling point of water?",
-    options: ["(a) 50°C", "(b) 100°C", "(c) 120°C", "(d) 90°C", "(e) 80°C"],
-    answer: "100°C",
-  },
-  {
-    question: "Which planet is known as the Red Planet?",
-    options: [
-      "(a) Earth",
-      "(b) Venus",
-      "(c) Mars",
-      "(d) Jupiter",
-      "(e) Saturn",
-    ],
-    answer: "Mars",
-  },
-  {
-    question: "Which gas do plants absorb?",
-    options: [
-      "(a) Oxygen",
-      "(b) Hydrogen",
-      "(c) Carbon Dioxide",
-      "(d) Nitrogen",
-      "(e) Helium",
-    ],
-    answer: "Carbon Dioxide",
-  },
-  {
-    question: "What is H2O commonly called?",
-    options: [
-      "(a) Salt",
-      "(b) Water",
-      "(c) Hydrogen",
-      "(d) Oxygen",
-      "(e) Carbon Dioxide",
-    ],
-    answer: "Water",
-  },
-  {
-    question: "How many bones are in the adult body?",
-    options: ["(a) 206", "(b) 300", "(c) 150", "(d) 250", "(e) 180"],
-    answer: "206",
-  },
-  {
-    question: "Which blood group is universal donor?",
-    options: ["(a) A", "(b) B", "(c) O", "(d) AB", "(e) A+"],
-    answer: "O",
-  },
-  {
-    question: "Which organ helps humans breathe?",
-    options: ["(a) Heart", "(b) Liver", "(c) Lungs", "(d) Kidney", "(e) Brain"],
-    answer: "Lungs",
-  },
-];
 
-// ============================
-// VARIABLES
-// ============================
+const params = new URLSearchParams(window.location.search);
 
+const examId = params.get("examId");
+
+let questions = [];
 let currentQuestion = 0;
+let answers = {};
 
-let answers = JSON.parse(localStorage.getItem("answers")) || {};
+let timerInterval;
+let timeLeft = 0;
 
-// ============================
-// ELEMENTS
-// ============================
 
-const qText = document.getElementById("questionText");
-const qNumber = document.getElementById("questionNumber");
-const optionsBox = document.getElementById("options");
-const grid = document.getElementById("questionGrid");
 
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
+//Load profile
+async function loadProfile() {
+  try {
+    const res = await fetch(`${API}/students/profile/me`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
 
-const timerEl = document.getElementById("timer");
+    if (!res.ok) {
+      throw new Error(`HTTP error ${res.status}`);
+    }
 
-// ============================
-// CREATE QUESTION GRID
-// ============================
+    const student = await res.json();
 
-questions.forEach((_, i) => {
-  const btn = document.createElement("button");
+    document.getElementById("studentName").textContent =
+      `${student.surname} ${student.firstname}`;
 
-  btn.textContent = i + 1;
+    document.getElementById("studentClass").textContent =
+      student.class;
 
-  btn.addEventListener("click", () => {
-    currentQuestion = i;
-    loadQuestion();
+    return student;
+
+  } catch (err) {
+    console.error("Profile load failed:", err);
+  }
+}
+
+
+
+//load attempt
+//restore attempts
+let attemptId;
+
+
+async function restoreAttempt() {
+    const res = await fetch(
+    `${API}/attempt/active/${examId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  );
+
+  if (res.ok) {
+
+    const data = await res.json();
+
+    const attempt = data.attempt;
+
+
+    attemptId = attempt._id;
+
+    timeLeft = attempt.remainingTime;
+
+    answers = {};
+
+    attempt.answers.forEach(answer => {
+
+      answers[answer.question] =
+        answer.selectedAnswer;
+
+    });
+
+  }
+  else {
+
+    const startRes = await fetch(
+      `${API}/exam-attempts/start`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type":"application/json",
+          Authorization:`Bearer ${token}`
+        },
+        body: JSON.stringify({
+          examId
+        })
+      }
+    );
+
+    const startData =
+      await startRes.json();
+
+    attemptId =
+      startData.attempt._id;
+  }
+
+}
+
+
+
+
+//load exam
+async function loadExam() {
+
+  const res = await fetch(
+    `${API}/exam/${examId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  );
+
+  const data = await res.json();
+
+  const exam = data.exam;
+
+  document.getElementById("examTitle").textContent =
+    exam.title;
+
+  document.getElementById("examInstruction").textContent =
+    exam.instructions || "Answer all questions";
+
+  document.getElementById("subjectName").textContent =
+    exam.subject.name;
+
+  document.getElementById("modalSubject").textContent =
+    exam.subject.name;
+
+
+  if (!timeLeft) {
+    timeLeft = exam.duration * 60;
+  }
+
+}
+
+
+
+
+
+
+
+//load Questions
+async function loadQuestions() {
+
+  const res = await fetch(
+    `${API}/question/exam/${examId}`,
+    {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    }
+  );
+
+  const data = await res.json();
+
+  questions = data.questions;
+
+  generateQuestionGrid();
+
+  questions.forEach((q, index) => {
+    if (answers[q._id]) {
+      document
+        .getElementById(`q-${index}`)
+        .classList.add("answered");
+    }
   });
 
-  grid.appendChild(btn);
-});
+  showQuestion(0);
+}
 
-// ============================
-// LOAD QUESTION
-// ============================
 
-function loadQuestion() {
-  const q = questions[currentQuestion];
 
-  qNumber.textContent = `Question ${currentQuestion + 1}:`;
+//Question Grid
+function generateQuestionGrid() {
 
-  qText.textContent = q.question;
+  const grid =
+    document.getElementById("questionGrid");
 
-  optionsBox.innerHTML = "";
+  grid.innerHTML = "";
 
-  q.options.forEach((opt) => {
-    const btn = document.createElement("button");
+  questions.forEach((q, index) => {
 
-    btn.textContent = opt;
+    const btn =
+      document.createElement("button");
 
-    if (answers[currentQuestion] === opt) {
-      btn.classList.add("selected");
-    }
+    btn.textContent = index + 1;
 
     btn.onclick = () => {
-      answers[currentQuestion] = opt;
-
-      // AUTO SAVE
-      localStorage.setItem("answers", JSON.stringify(answers));
-
-      loadQuestion();
-      updateGrid();
+      currentQuestion = index;
+      showQuestion(index);
     };
 
-    optionsBox.appendChild(btn);
-  });
+    btn.id = `q-${index}`;
 
-  updateGrid();
-}
-
-// ============================
-// UPDATE QUESTION GRID
-// ============================
-
-function updateGrid() {
-  const buttons = grid.querySelectorAll("button");
-
-  buttons.forEach((btn, i) => {
-    btn.classList.remove("active");
-    btn.classList.remove("answered");
-
-    if (i === currentQuestion) {
-      btn.classList.add("active");
-    }
-
-    if (answers[i]) {
-      btn.classList.add("answered");
-    }
+    grid.appendChild(btn);
   });
 }
 
-// ============================
-// NAVIGATION
-// ============================
 
-nextBtn.onclick = () => {
-  if (currentQuestion < questions.length - 1) {
-    currentQuestion++;
-    loadQuestion();
+
+//Questions Display
+function showQuestion(index) {
+
+  const q = questions[index];
+
+  document.getElementById(
+    "questionNumber"
+  ).textContent =
+    `Question ${index + 1}`;
+
+  document.getElementById(
+    "questionText"
+  ).textContent =
+    q.question;
+
+  const optionsDiv =
+    document.getElementById("options");
+
+  optionsDiv.innerHTML = "";
+
+  Object.entries(q.options)
+    .forEach(([key, value]) => {
+
+      const checked =
+        answers[q._id] === key
+          ? "checked"
+          : "";
+
+      optionsDiv.innerHTML += `
+        <label class="option">
+          <input
+            type="radio"
+            name="option"
+            value="${key}"
+            ${checked}
+          />
+          ${key.toUpperCase()}. ${value}
+        </label>
+      `;
+    });
+
+  document
+    .querySelectorAll(
+      'input[name="option"]'
+    )
+    .forEach(input => {
+
+      input.addEventListener(
+        "change",
+        () => {
+
+          answers[q._id] = input.value;
+
+          localStorage.setItem(
+              `exam_answers_${examId}`,
+              JSON.stringify(answers)
+          );
+
+          saveAnswer(
+              q._id,
+              input.value
+          );
+
+          document
+            .getElementById(
+              `q-${index}`
+            )
+            .classList.add(
+              "answered"
+            );
+        }
+      );
+    });
+}
+
+
+
+//Navigation buttons
+document
+  .getElementById("nextBtn")
+  .addEventListener("click", () => {
+
+    if (
+      currentQuestion <
+      questions.length - 1
+    ) {
+      currentQuestion++;
+      showQuestion(currentQuestion);
+    }
+  });
+
+document
+  .getElementById("prevBtn")
+  .addEventListener("click", () => {
+
+    if (currentQuestion > 0) {
+      currentQuestion--;
+      showQuestion(currentQuestion);
+    }
+  });
+
+
+
+
+
+//Timer
+function startTimer() {
+
+
+  timerInterval =
+    setInterval(() => {
+
+      const mins =
+        Math.floor(timeLeft / 60);
+
+      const secs =
+        timeLeft % 60;
+
+      document.getElementById(
+        "timer"
+      ).textContent =
+        `${mins}:${
+          secs < 10
+            ? "0" + secs
+            : secs
+        }`;
+
+      timeLeft--;
+
+      if (timeLeft < 0) {
+
+        clearInterval(
+          timerInterval
+        );
+
+        confirmSubmit();
+      }
+
+    }, 1000);
+}
+
+
+
+
+//Save timer 30sec
+async function saveRemainingTime() {
+
+    try {
+
+        await fetch(
+            `${API}/attempt/save-time`,
+            {
+                method: "PUT",
+                headers: {
+                    "Content-Type":
+                        "application/json",
+                    Authorization:
+                        `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    attemptId,
+                    remainingTime: timeLeft
+                })
+            }
+        );
+
+    } catch(err) {
+        console.log(err);
+    }
+}
+
+
+
+
+//Save Answer
+async function saveAnswer(
+    questionId,
+    selectedAnswer
+) {
+
+    try {
+
+        await fetch(
+            `${API}/attempt/update-answer`,
+            {
+                method: "PUT",
+                headers: {
+                    "Content-Type":
+                        "application/json",
+                    Authorization:
+                        `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    attemptId,
+                    questionId,
+                    selectedAnswer
+                })
+            }
+        );
+
+    } catch (err) {
+        console.error(
+            "Answer save failed",
+            err
+        );
+    }
+}
+
+
+//Submit Modal
+function openModal() {
+
+  const answered =
+    Object.keys(answers).length;
+
+  const unanswered =
+    questions.length - answered;
+
+  document.getElementById(
+    "answeredCount"
+  ).textContent = answered;
+
+  document.getElementById(
+    "unansweredCount"
+  ).textContent = unanswered;
+
+  document
+    .getElementById(
+      "submitModal"
+    )
+    .classList.remove("hidden");
+}
+
+function closeModal() {
+
+  document
+    .getElementById(
+      "submitModal"
+    )
+    .classList.add("hidden");
+}
+
+
+
+
+//Submit Exam
+async function confirmSubmit() {
+
+  clearInterval(timerInterval);
+
+  const formattedAnswers =
+    Object.entries(answers).map(
+      ([questionId, selectedAnswer]) => ({
+        questionId,
+        selectedAnswer
+      })
+    );
+
+  try {
+
+    const res = await fetch(
+      `${API}/attempt/submit`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type":
+            "application/json",
+          Authorization:
+            `Bearer ${token}`
+        },
+        body: JSON.stringify({
+          attemptId,
+          answers: formattedAnswers
+        })
+      }
+    );
+
+    const data =
+      await res.json();
+
+    if (!res.ok)
+      throw new Error(
+        data.message
+      );
+
+    localStorage.removeItem(
+      `exam_answers_${examId}`
+    );
+
+    document
+      .getElementById(
+        "submitModal"
+      )
+      .classList.add("hidden");
+
+    document
+      .getElementById(
+        "successModal"
+      )
+      .classList.remove("hidden");
+
+  } catch (err) {
+
+    alert(err.message);
+
   }
-};
+}
 
-prevBtn.onclick = () => {
-  if (currentQuestion > 0) {
-    currentQuestion--;
-    loadQuestion();
+
+
+
+//auto save before closig browser
+window.addEventListener(
+  "beforeunload",
+  () => {
+
+    localStorage.setItem(
+      `exam_answers_${examId}`,
+      JSON.stringify(answers)
+    );
+
+    navigator.sendBeacon(
+      `${API}/attempt/save-time`,
+      new Blob(
+        [
+          JSON.stringify({
+            attemptId,
+            remainingTime:
+              timeLeft
+          })
+        ],
+        {
+          type:
+            "application/json"
+        }
+      )
+    );
   }
-};
+);
 
-// ============================
-// TIMER
-// ============================
 
-let duration = 45 * 60;
 
-const timer = setInterval(() => {
-  const min = Math.floor(duration / 60);
 
-  const sec = duration % 60;
+//Dashboard
+function goToDashboard() {
+  window.location.href = "./profile.html"; // adjust path
+}
 
-  timerEl.textContent = `${String(min).padStart(2, "0")} : ${String(
-    sec,
-  ).padStart(2, "0")}`;
+//DOM
+document.addEventListener(
+  "DOMContentLoaded",
+  async () => {
 
-  if (duration <= 0) {
-    clearInterval(timer);
+    if (!examId) {
+      alert("Exam ID missing");
+      return;
+    }
 
-    confirmSubmit();
+    await loadProfile();
+
+    await restoreAttempt();
+
+    await loadExam();
+
+    await loadQuestions();
+
+    startTimer();
+
+    setInterval(
+      saveRemainingTime,
+      30000
+    );
   }
+);
 
-  duration--;
-}, 1000);
 
-// ============================
-// MODAL FUNCTIONS
-// ============================
 
-window.openModal = function () {
-  const answered = Object.keys(answers).length;
 
-  const total = questions.length;
 
-  const unanswered = total - answered;
 
-  document.getElementById("answeredCount").textContent =
-    `${answered} out of ${total}`;
-
-  document.getElementById("unansweredCount").textContent =
-    `${unanswered} Questions`;
-
-  document.getElementById("submitModal").classList.remove("hidden");
-};
-
-window.closeModal = function () {
-  document.getElementById("submitModal").classList.add("hidden");
-};
-
-window.confirmSubmit = function () {
-  document.getElementById("submitModal").classList.add("hidden");
-
-  localStorage.removeItem("answers");
-
-  setTimeout(() => {
-    document.getElementById("successModal").classList.remove("hidden");
-  }, 300);
-};
-
-window.goToDashboard = function () {
-  window.location.href = "/index.html";
-};
-
-// ============================
-// INITIAL LOAD
-// ============================
-
-loadQuestion();

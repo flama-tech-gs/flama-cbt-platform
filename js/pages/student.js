@@ -1,5 +1,16 @@
 //student.js
 
+const surname = document.getElementById("surname");
+const firstname = document.getElementById("firstname");
+const email = document.getElementById("email");
+const classInput = document.getElementById("classInput");
+const department = document.getElementById("department");
+const age = document.getElementById("age");
+const admissionYear = document.getElementById("admissionYear");
+const parentPhoneNumber = document.getElementById("parentPhoneNumber");
+const currentTerm = document.getElementById("currentTerm");
+const address = document.getElementById("address");
+
 document.getElementById("studentForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -8,7 +19,7 @@ document.getElementById("studentForm").addEventListener("submit", async (e) => {
       surname: surname.value,
       firstname: firstname.value,
       email: email.value,
-      class: class.value,
+      class: classInput.value,
       department: department.value,
       age: age.value,
       admissionYear: admissionYear.value,

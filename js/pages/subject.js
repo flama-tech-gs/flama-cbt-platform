@@ -1,15 +1,19 @@
-//subject.js
+const nameInput = document.getElementById("name");
+const codeInput = document.getElementById("code");
+const descriptionInput = document.getElementById("description");
+const classInput = document.getElementById("class");
+const teacherInput = document.getElementById("teacher");
 
 document.getElementById("subjectForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   try {
     const data = {
-      name: name.value,
-      code: code.value,
-      description: description.value,
-      class: class.value,
-      teacher: teacher.value,
+      name: nameInput.value,
+      code: codeInput.value,
+      description: descriptionInput.value,
+      class: classInput.value,
+      teacher: teacherInput.value,
     };
 
     const res = await request("/subject", "POST", data, true);
@@ -18,6 +22,6 @@ document.getElementById("subjectForm").addEventListener("submit", async (e) => {
     alert("Subject created");
   } catch (err) {
     console.error(err);
-    alert(err.message);
+    alert(err.message || "Failed to create subject");
   }
 });
